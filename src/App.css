@@ -1,1 +1,1389 @@
 /* Other rules */
+body {
+  font-family: "Urbanist", sans-serif;
+  background-color: black;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+/* Loading Page  */
+.loadingPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Headerbar */
+.header {
+  box-sizing: border-box;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  background-color: black;
+}
+.logoDiv {
+  margin-left: 2%;
+}
+.logoDiv :hover {
+  cursor: pointer;
+}
+.headerLogo {
+  max-height: 120px;
+}
+.headerButtons {
+  display: flex;
+  margin-right: 2%;
+  width: 40%;
+  justify-content: space-evenly;
+}
+.headerButtons :hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: lightgray;
+}
+.accountButton {
+  background-color: inherit;
+  border: none;
+  color: red;
+  font-size: 1.5em;
+  font-family: inherit;
+  margin-right: 2%;
+}
+
+/* HOMEPAGE  =======================================================*/
+.homePage {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeFirstPart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+.videoWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+}
+.bgVideo {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.searchBar {
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 10px;
+  padding-bottom: 5rem;
+}
+
+.searchBar form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.2rem;
+  width: 100%;
+}
+.searchBar form :hover {
+  cursor: pointer;
+}
+.searchBar input {
+  width: 60%;
+  height: 100%;
+  font-family: inherit;
+  font-size: 1.2em;
+  box-sizing: border-box;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.locationSearch {
+  width: 15%;
+  height: 100%;
+  font-family: inherit;
+  border-radius: 10px;
+  font-size: 20px;
+  opacity: 0.9;
+}
+.typeSearch {
+  width: 10%;
+  height: 100%;
+  font-family: inherit;
+  border-radius: 10px;
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+.priceSearch {
+  width: 15%;
+  height: 100%;
+  font-family: inherit;
+  border-radius: 10px;
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+.searchBar button {
+  height: 100%;
+  width: 20%;
+  font-family: inherit;
+  font-size: 1.2em;
+  border-radius: 10px;
+  background-color: grey;
+  color: white;
+  border: 1px solid white;
+  opacity: 0.9;
+}
+.bigTitle {
+  font-family: "Crimson Text", serif;
+  font-size: 2.5em;
+  color: white;
+  opacity: 1;
+
+  height: 50%;
+}
+.socialMedias {
+  margin-top: 5%;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+.socialMediasIcons {
+  color: white;
+  font-size: 2.5rem;
+}
+.allModelsSearch h2 {
+  color: white;
+  margin-top: 2rem;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1.2em;
+}
+.allModelsSearch :hover {
+  cursor: pointer;
+  color: red;
+}
+/* Seconde partie de la page d'accueil  */
+.homeSecondpart {
+  width: 100%;
+  position: relative;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+.homeSecondpart svg {
+  display: block;
+}
+.promotionPart {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.argumentsPromo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+  text-align: center;
+}
+.argumentsPromo p {
+  font-size: 1.2em;
+}
+/* Third Part Take the Road */
+.thirdPartHome {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lastPartHome {
+  height: 18rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+  background-image: url("./Images/bandeau.jpeg");
+  background-size: cover;
+}
+.lastPartHome h1 {
+  color: white;
+  font-size: 2.5em;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.lastPartHome :hover {
+  cursor: pointer;
+
+  opacity: 0.7;
+
+  background-color: red;
+}
+/* Fourth part of Homepage with categories */
+.fourthParthome {
+  background-color: white;
+}
+.bikeCategories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+}
+.bikecat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 20%;
+  border: 1px solid red;
+
+  border-radius: 10px;
+  padding-bottom: 3vh;
+}
+.bikecat img {
+  width: 90%;
+}
+.bikeCategories :hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.bikecat h1 {
+  font-size: 1.5em;
+}
+
+/* PAGE OFFERS ====================================================> */
+.OfferPage {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.formContainer {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  border: 1px solid red;
+  border-radius: 10px;
+  margin-top: 5%;
+}
+.formContainer form {
+  display: flex;
+  width: 60%;
+  height: 5vh;
+}
+.formContainer button {
+  height: 100%;
+  width: 20%;
+  font-family: inherit;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: grey;
+  color: white;
+  border: 1px solid white;
+  opacity: 0.9;
+}
+.formContainer input {
+  width: 40%;
+  height: 100%;
+  font-family: inherit;
+  font-size: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.offerSelection {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.correspondantoffers {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.OfferCount {
+  margin-bottom: 4%;
+  padding-bottom: 4%;
+  width: 60%;
+  padding-top: 4%;
+  border-bottom: 1px solid red;
+}
+.oneOffer {
+  width: 60%;
+  height: 30vh;
+  border-bottom: 1px solid red;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1%;
+  justify-content: flex-start;
+  padding-bottom: 1%;
+}
+.oneOffer img {
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.oneOffer :hover {
+  cursor: pointer;
+}
+.secondPartOneOffer {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 2%;
+  border-radius: 10px;
+}
+.inlineSpec {
+  display: flex;
+  flex-direction: row;
+}
+.inlineSpecSection {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* SIGNUP PAGE ========================> */
+
+.signupPage {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./Images/backgroundSIgnUp.png");
+  background-color: rgb(34, 34, 34);
+  background-blend-mode: overlay;
+}
+.formArea {
+  display: flex;
+  width: 50vw;
+  border-radius: 10px;
+  flex-direction: column;
+  border: 1px solid red;
+  padding-top: 10%;
+  padding: 5%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+.signupTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8%;
+}
+.logdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5%;
+}
+.logdiv h2 {
+  font-size: 1.5em;
+}
+.logdiv input {
+  width: 50%;
+  height: 35%;
+  font-family: inherit;
+}
+.submitSignup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submitSignup :hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
+.submitSignup button {
+  background: none;
+  color: inherit;
+  border: 2px solid red;
+  border-radius: 10px;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  padding: 1%;
+}
+.ifnot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ifnot :hover {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.loginbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.errorMessage {
+  color: red;
+}
+
+/* PUBLISH PAGE ======================================> */
+.publishPage {
+  color: White;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+  background-image: url("./Images/backgroundPublish.png");
+  background-color: rgb(34, 34, 34);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.publishPage h3 {
+  font-size: 2em;
+}
+.publishForm {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.publishAnnonce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  text-align: center;
+  padding: 5%;
+}
+.publishAnnonce h1 {
+  font-size: 50px;
+}
+s .formFirstPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: 1px solid red;
+  border-radius: 10px;
+
+  padding-bottom: 10%;
+  margin-top: 5%;
+}
+.formFirstPart h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.firstPartTitle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.yourRideSpecs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.yourRideSpecs h3 {
+  font-size: 2em;
+  margin-right: 10rem;
+}
+
+.SpecOfBike {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border: 1px solid red;
+  border-radius: 10px;
+  margin-bottom: 5%;
+}
+.SpecOfBike input {
+  width: 35%;
+  height: 40%;
+  font-family: inherit;
+  font-size: 1.3em;
+}
+.SpecOfBike select {
+  width: 35%;
+  height: 40%;
+  font-family: inherit;
+  font-size: 1.3em;
+}
+.formSecondPart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  border-radius: 10px;
+
+  padding-bottom: 10%;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+
+.titleAnnonce {
+  width: 60vw;
+  border: 1px solid red;
+
+  border-radius: 10px;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+}
+.titleAnnonce input {
+  width: 50%;
+  height: 50%;
+  font-size: 1.3em;
+}
+
+.descriptionAnnonce {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+
+  border-radius: 10px;
+  border: 1px solid red;
+}
+.descriptionAnnonce textarea {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  font-size: 1.3em;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: inherit;
+}
+.locationAnnonce {
+  width: 100%;
+  height: 5rem;
+  border: 1px solid red;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+}
+.locationAnnonce select {
+  width: 50%;
+  height: 40%;
+  font-size: 1.3em;
+}
+
+.priceAnnonce {
+  width: 100%;
+  height: 5rem;
+  border: 1px solid red;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+}
+.priceAnnonce input {
+  width: 50%;
+  height: 40%;
+  font-size: 1.3em;
+}
+
+.pictureAnnonce {
+  width: 100%;
+  height: 5rem;
+  border: 1px solid red;
+  border-radius: 10px;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.pictureAnnonce input {
+  width: 50%;
+  height: 40%;
+  font-family: inherit;
+  font-size: 1.3em;
+}
+
+.submitYourAnnonce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  border-radius: 10px;
+  width: 100%;
+
+  padding-bottom: 10%;
+  margin-top: 5%;
+  border-radius: 10px;
+  margin-bottom: 10%;
+}
+.submitYourAnnonce h1 {
+  font-size: 50px;
+}
+.submitOrError {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.errorSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.errorMessagePublish {
+  color: red;
+  font-size: 20px;
+}
+.submitOrError button {
+  width: 50%;
+  font-family: inherit;
+  height: 3rem;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  font-size: 1.3em;
+}
+.submitOrError :hover {
+  cursor: pointer;
+  color: white;
+  background-color: red;
+}
+/* PAGE ONE OFFER ==============================================> */
+
+.oneOfferPage {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.entireOffer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.firstPartOfOneOfferOneOfferPage {
+  margin-top: 3%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 10%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid red;
+}
+.firstPartOfOneOfferOneOfferPage h1 {
+  font-size: 2.4em;
+}
+.firstPartOfOneOfferOneOfferPage img {
+  width: 100%;
+  margin-bottom: 3%;
+}
+.picturesOneOffer {
+  width: 100%;
+  display: flex;
+  margin-bottom: 5%;
+}
+
+.locationAndMiles {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  justify-content: space-evenly;
+}
+.secondPartOneOfferOneOfferPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 1em;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  border-bottom: 1px solid red;
+  border-radius: 0px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.newCriteriasOneOffer {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.descriptionPartOneOffer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 2em;
+  border-bottom: 1px solid red;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.contactPartOneOffer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid red;
+}
+.contactPartOneOffer h2 {
+  border: 1px solid red;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
+.contactPartOneOffer :hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+/* LOGIN PAGE ================================================> */
+.loginPage {
+  height: 100%;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./Images/backgroundLogin.png");
+  background-color: rgb(34, 34, 34);
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+.formLoginArea {
+  margin-top: 8%;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  border-radius: 10px;
+  margin-bottom: 8%;
+}
+.formLogin {
+  width: 100%;
+  height: 100%;
+}
+.loginTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+  margin-top: 8%;
+}
+.logindiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 5%;
+}
+.logindiv h2 {
+  font-size: 1.5em;
+}
+.logindiv input {
+  width: 50%;
+  height: 40%;
+  font-family: inherit;
+}
+.submitLoginButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submitLoginButton button {
+  background: none;
+  color: inherit;
+  border: 2px solid red;
+  border-radius: 10px;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  padding: 1%;
+}
+.submitLoginButton :hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
+.ifnotLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+
+.ifnotLogin :hover {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* CONTACT FORM PAGE =========================================================> */
+.contactPage {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contactFormTitle {
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+.contactFormTitle h1 {
+  font-size: 2.7em;
+}
+.contactForm {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6%;
+}
+.contactForm form {
+  width: 80%;
+}
+.infoContact {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3%;
+}
+.infoContact h1 {
+  font-size: 2em;
+}
+.infoContact input {
+  width: 60%;
+  height: 2rem;
+  font-size: 1.2em;
+  font-family: inherit;
+}
+.datesContactForm {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3%;
+}
+.datePicker {
+  width: 50%;
+  font-size: 1.2em;
+  color: black;
+}
+.infoContactTextArea {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+.infoContactTextArea textarea {
+  width: 100%;
+  height: 10rem;
+  font-family: inherit;
+  font-size: 1.2em;
+}
+.errorContact {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.errorContact h2 {
+  color: red;
+  text-align: center;
+}
+.submissionContactForm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 7%;
+}
+.submissionContactForm button {
+  border: 1px solid red;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 5%;
+  font-family: inherit;
+  width: 100%;
+}
+.submissionContactForm :hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* UPDATEPAGE =============================>>>>>>>>>>>>>>>>>>>>>> */
+
+.updateForm {
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
+
+.updatePictureAnnonce img {
+  max-height: 200px;
+  padding: 2%;
+}
+.updatePictureAnnonce {
+  width: 100%;
+  height: 10%;
+  border: 1px solid red;
+  border-radius: 10px;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.pictureAnnonce input {
+  width: 50%;
+  height: 40%;
+  font-family: inherit;
+  font-size: 1.3em;
+}
+
+/* DELETE PAGE ===========================>>>>>>>>> */
+.deletePage {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.deleteParts {
+  width: 60%;
+  border: 1px solid red;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.deleteConditions {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.deleteButtons {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.deleteButtons h1 {
+  color: red;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1%;
+}
+.deleteButtons h2 {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1%;
+}
+.deleteButtons :hover {
+  background-color: white;
+  color: red;
+  cursor: pointer;
+}
+/* DELETESUCESS PAGE ============================>>>>>>>>>>3""""" */
+.deleteSucessPage {
+  color: white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sucessSection {
+  width: 70%;
+  height: 50vh;
+  border: 1px solid red;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sucessSection h1 {
+  font-size: 3em;
+  color: red;
+}
+
+.returnSucessButton button {
+  color: white;
+  border: 1px solid red;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  background-color: inherit;
+  padding: 1%;
+  font-size: 1.5em;
+}
+.returnSucessButton :hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+/* =================================USEROFFERPAGE======================> */
+.userOffersPage {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./Images/backgroundOfferFromProfile.png");
+  background-color: rgb(34, 34, 34);
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+
+.offersList {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.oneOfferFromList {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 3%;
+  margin-bottom: 2%;
+}
+.oneOfferFromList img {
+  width: 80%;
+}
+.buttonToGetToOffer {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+}
+.buttonToGetToOffer h3 {
+  border: 1px solid red;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
+.buttonToGetToOffer :hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .headerButtons {
+    width: 60%;
+  }
+}
+@media (max-width: 1024px) {
+  .argumentsPromo p {
+    font-size: 1.2em;
+  }
+  .argumentsPromo h1 {
+    font-size: 1.8em;
+  }
+  .headerButtons {
+    width: 80%;
+  }
+  .accountButton {
+    font-size: 1.1em;
+  }
+  .homeFirstPart {
+    background-image: url("./Images/backgroundHomePage.png");
+    background-size: cover;
+    background-color: rgb(70, 70, 70);
+    background-blend-mode: overlay;
+    height: 20%;
+  }
+  .bigTitle {
+    font-size: 2em;
+  }
+  .searchBar {
+    width: 80%;
+  }
+  .searchBar button {
+    font-size: 1em;
+  }
+  .searchBar form {
+    height: 2.5rem;
+  }
+  .searchBar input {
+    width: 40%;
+  }
+  .locationSearch {
+    width: 15%;
+    font-size: 1em;
+  }
+  .typeSearch {
+    font-size: 1em;
+  }
+  .priceSearch {
+    font-size: 1em;
+  }
+  .videoWrap {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .argumentsPromo p {
+    font-size: 1em;
+  }
+  .argumentsPromo h1 {
+    font-size: 1.6em;
+  }
+  .headerLogo {
+    max-width: 80px;
+  }
+  .homeFirstPart {
+    height: 90vh;
+  }
+  .accountButton {
+    font-size: 1em;
+  }
+  .searchBar form {
+    height: 2.5rem;
+  }
+  .searchBar input {
+    width: 40%;
+    font-size: 0.8em;
+  }
+  .locationSearch {
+    width: 15%;
+    font-size: 0.8em;
+  }
+  .typeSearch {
+    font-size: 0.8em;
+  }
+  .priceSearch {
+    font-size: 0.8em;
+  }
+  .socialMedias {
+    width: 30%;
+  }
+  .socialMediasIcons {
+    font-size: 2em;
+  }
+}
+@media (max-width: 600px) {
+  .bikecat {
+    width: 40%;
+    margin-bottom: 20%;
+  }
+  .thirdPartHome h1 {
+    font-size: 2em;
+  }
+  .argumentsPromo {
+    width: 60%;
+  }
+  .argumentsPromo p {
+    font-size: 1em;
+  }
+  .argumentsPromo h1 {
+    font-size: 1.4em;
+  }
+  .bigTitle {
+    font-size: 1.6em;
+  }
+  .searchBar form {
+    height: 2rem;
+  }
+  .accountButton {
+    font-size: 1em;
+  }
+  .headerButtons {
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 3%;
+  }
+  .logoDiv {
+    display: none;
+  }
+  .searchBar input {
+    width: 40%;
+    font-size: 0.8em;
+  }
+  .locationSearch {
+    width: 20%;
+    font-size: 0.7em;
+  }
+  .typeSearch {
+    display: none;
+  }
+  .priceSearch {
+    font-size: 0.7em;
+    width: 20%;
+  }
+  .socialMediasIcons {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 400px) {
+  .bikecat h1 {
+    font-size: 0.85em;
+  }
+  .thirdPartHome h1 {
+    font-size: 1em;
+  }
+
+  .argumentsPromo h1 {
+    font-size: 1.4em;
+  }
+  .headerButtons {
+    font-size: 0.7em;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .searchBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+  }
+  .searchBar button {
+    font-size: 0.8em;
+    width: 30%;
+  }
+  .searchBar input {
+    width: 70%;
+    font-size: 0.8em;
+  }
+  .locationSearch {
+    display: none;
+  }
+  .typeSearch {
+    display: none;
+  }
+  .priceSearch {
+    display: none;
+  }
+  .socialMediasIcons {
+    font-size: 1.2em;
+  }
+  .bigTitle {
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+  }
+}
