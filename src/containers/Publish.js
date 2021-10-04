@@ -4,7 +4,6 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { useHistory } from "react-router-dom";
 import Loader from "react-loader-spinner";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const Publish = ({ token }) => {
   const [title, setTitle] = useState("");
@@ -84,7 +83,7 @@ const Publish = ({ token }) => {
   ) : (
     <div className="publishPage">
       <div className="publishAnnonce">
-        <h1>LOUER VOTRE MOTO</h1>
+        <h1>LOUEZ VOTRE MOTO</h1>
         <p>
           Renseignez TOUS les critères demandés dans le formulaire afin que
           votre annonce soit publiée. Si quelqu'un souhaite louer votre véhicule
@@ -98,161 +97,156 @@ const Publish = ({ token }) => {
               <h1>1-Votre Moto</h1>
             </div>
 
-            <div className="yourRideSpecs">
-              <div className="SpecOfBike">
-                <h3>Marque</h3>
-                <input
-                  onChange={(event) => {
-                    setBrand(event.target.value);
-                  }}
-                  placeholder="Yamaha, Honda..."
-                  type="text"
-                />
-              </div>
-              <div className="SpecOfBike">
-                <h3>Modèle</h3>
-                <input
-                  onChange={(event) => {
-                    setModel(event.target.value);
-                  }}
-                  placeholder="XJR1300, IRON883"
-                  type="text"
-                />
-              </div>
-              <div className="SpecOfBike">
-                <h3>Année</h3>
-                <input
-                  onChange={(event) => {
-                    setYear(event.target.value);
-                  }}
-                  type="number"
-                  min="1900"
-                  max="2099"
-                  placeholder="2015"
-                />
-              </div>
-              <div className="SpecOfBike">
-                <h3>Kilométrage</h3>
-                <input
-                  onChange={(event) => {
-                    setMiles(event.target.value);
-                  }}
-                  placeholder="32000"
-                  type="number"
-                  min="0"
-                />
-              </div>
-              <div className="SpecOfBike">
-                <h3>Type</h3>
-                <select
-                  onChange={(event) => {
-                    setType(event.target.value);
-                  }}
-                >
-                  <option value="">Type</option>
-                  <option value="roadster">Roadster</option>
-                  <option value="sportive">Sportive</option>
-                  <option value="trail">Trail</option>
-                  <option value="custom">Custom / Vintage</option>
-                </select>
-              </div>
+            <div className="SpecOfBike">
+              <h3>Marque</h3>
+              <input
+                onChange={(event) => {
+                  setBrand(event.target.value);
+                }}
+                placeholder="Yamaha, Honda..."
+                type="text"
+              />
+            </div>
+            <div className="SpecOfBike">
+              <h3>Modèle</h3>
+              <input
+                onChange={(event) => {
+                  setModel(event.target.value);
+                }}
+                placeholder="XJR1300, IRON883"
+                type="text"
+              />
+            </div>
+            <div className="SpecOfBike">
+              <h3>Année</h3>
+              <input
+                onChange={(event) => {
+                  setYear(event.target.value);
+                }}
+                type="number"
+                min="1900"
+                max="2099"
+                placeholder="2015"
+              />
+            </div>
+            <div className="SpecOfBike">
+              <h3>Kilométrage</h3>
+              <input
+                onChange={(event) => {
+                  setMiles(event.target.value);
+                }}
+                placeholder="32000"
+                type="number"
+                min="0"
+              />
+            </div>
+            <div className="SpecOfBike">
+              <h3>Type</h3>
+              <select
+                onChange={(event) => {
+                  setType(event.target.value);
+                }}
+              >
+                <option value="">Type</option>
+                <option value="roadster">Roadster</option>
+                <option value="sportive">Sportive</option>
+                <option value="trail">Trail</option>
+                <option value="custom">Custom / Vintage</option>
+              </select>
             </div>
           </div>
+
           <div className="formSecondPart">
             <div className="publishAnnonce">
               <h1>2-Votre Annonce</h1>
             </div>
-            <div>
-              <div className="titleAnnonce">
-                <h3>Titre de l'annonce</h3>
-                <input
-                  onChange={(event) => {
-                    setTitle(event.target.value);
-                  }}
-                  type="text"
-                  placeholder="MT-10 parfait état..."
-                />
-              </div>
-              <div className="descriptionAnnonce">
-                <h3>Description de l'annonce</h3>
-                <textarea
-                  onChange={(event) => {
-                    setDescription(event.target.value);
-                  }}
-                  type="text"
-                  placeholder="Description, km ect..."
-                />
-              </div>
-              <div className="locationAnnonce">
-                <h3>Votre Département</h3>
-                <select
-                  onChange={(event) => {
-                    setLocation(event.target.value);
-                  }}
-                  className="locationSearch"
-                  placeholder="Département"
-                >
-                  <option value="">Département</option>
-                  <option value="75">75 Paris</option>
-                  <option value="77">77 Seine-et-Marne</option>
-                  <option value="78">78 Yvelines</option>
-                  <option value="91">91 Essonne</option>
-                  <option value="92">92 Hauts-de-Seine</option>
-                  <option value="93">93 Seine-Saint-Denis</option>
-                  <option value="94">94 Val-de-Marne</option>
-                  <option value="95">95 Val-d'oise</option>
-                </select>
-              </div>
 
-              <div className="priceAnnonce">
-                <h3>Votre Prix par jour</h3>
-                <input
-                  onChange={(event) => {
-                    setPrice(event.target.value);
-                  }}
-                  type="number"
-                  placeholder="120 €"
-                  min="0"
-                  max="5000"
-                />
-              </div>
-              <div className="pictureAnnonce">
-                <h3>Photo 1</h3>
-                <input
-                  type="file"
-                  placeholder="votre photo"
-                  onChange={(event) => {
-                    setPicture(event.target.files[0]);
-                  }}
-                />
-              </div>
-              <div className="pictureAnnonce">
-                <h3>Photo 2</h3>
-                <input
-                  type="file"
-                  placeholder="votre photo"
-                  onChange={(event) => {
-                    setSecondPicture(event.target.files[0]);
-                  }}
-                />
-              </div>
-              <div className="pictureAnnonce">
-                <h3>Photo 3</h3>
-                <input
-                  type="file"
-                  placeholder="votre photo"
-                  onChange={(event) => {
-                    setThirdPicture(event.target.files[0]);
-                  }}
-                />
-              </div>
+            <div className="titleAnnonce">
+              <h3>Titre de l'annonce</h3>
+              <input
+                onChange={(event) => {
+                  setTitle(event.target.value);
+                }}
+                type="text"
+                placeholder="MT-10 parfait état..."
+              />
+            </div>
+            <div className="descriptionAnnonce">
+              <h3>Description de l'annonce</h3>
+              <textarea
+                onChange={(event) => {
+                  setDescription(event.target.value);
+                }}
+                type="text"
+                placeholder="Description, km ect..."
+              />
+            </div>
+            <div className="locationAnnonce">
+              <h3>Département</h3>
+              <select
+                onChange={(event) => {
+                  setLocation(event.target.value);
+                }}
+                className="locationSearch"
+                placeholder="Département"
+              >
+                <option value="">Département</option>
+                <option value="75">75 Paris</option>
+                <option value="77">77 Seine-et-Marne</option>
+                <option value="78">78 Yvelines</option>
+                <option value="91">91 Essonne</option>
+                <option value="92">92 Hauts-de-Seine</option>
+                <option value="93">93 Seine-Saint-Denis</option>
+                <option value="94">94 Val-de-Marne</option>
+                <option value="95">95 Val-d'oise</option>
+              </select>
+            </div>
+
+            <div className="priceAnnonce">
+              <h3>Votre Prix par jour</h3>
+              <input
+                onChange={(event) => {
+                  setPrice(event.target.value);
+                }}
+                type="number"
+                placeholder="120 €"
+                min="0"
+                max="5000"
+              />
+            </div>
+            <div className="pictureAnnonce">
+              <h3>Photo 1</h3>
+              <input
+                type="file"
+                placeholder="votre photo"
+                onChange={(event) => {
+                  setPicture(event.target.files[0]);
+                }}
+              />
+            </div>
+            <div className="pictureAnnonce">
+              <h3>Photo 2</h3>
+              <input
+                type="file"
+                placeholder="votre photo"
+                onChange={(event) => {
+                  setSecondPicture(event.target.files[0]);
+                }}
+              />
+            </div>
+            <div className="pictureAnnonce">
+              <h3>Photo 3</h3>
+              <input
+                type="file"
+                placeholder="votre photo"
+                onChange={(event) => {
+                  setThirdPicture(event.target.files[0]);
+                }}
+              />
             </div>
           </div>
 
           <div className="submitYourAnnonce">
-            <div className="publishAnnonce">
-              <h1>3-Publiez Votre Annonce</h1>
-            </div>
             <div className="errorSection">
               <p className="errorMessagePublish">{errorMessage}</p>
             </div>

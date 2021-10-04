@@ -43,6 +43,7 @@ const Offers = () => {
           console.log(response.data);
           setData(response.data);
           setIsLoading(false);
+          window.scrollTo(0, 0);
         } else {
           const response = await axios.get(
             `https://ride-it-back.herokuapp.com/offers?page=1`
@@ -50,6 +51,7 @@ const Offers = () => {
           console.log(response.data);
           setData(response.data);
           setIsLoading(false);
+          window.scrollTo(0, 0);
         }
       } catch (error) {
         console.log({ error: error.message });

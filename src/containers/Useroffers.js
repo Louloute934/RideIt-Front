@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
+import { motion, useAnimation } from "framer-motion";
 
 const Useroffers = ({ token }) => {
   const [data, setData] = useState();
@@ -49,14 +50,16 @@ const Useroffers = ({ token }) => {
               <h2>Titre: {offer.title}</h2>
               <h2>Prix: {offer.price} €</h2>
               <div className="buttonToGetToOffer">
-                <h3
+                <motion.h3
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   onClick={() => {
                     const id = offer._id;
                     history.push(`/offer/${id}`);
                   }}
                 >
                   Accèder à l'annonce
-                </h3>
+                </motion.h3>
               </div>
             </div>
           );

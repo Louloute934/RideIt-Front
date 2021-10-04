@@ -6,6 +6,8 @@ import Loader from "react-loader-spinner";
 
 import Carousel from "react-grid-carousel";
 
+import { motion, useAnimation } from "framer-motion";
+
 const Offer = ({ token }) => {
   const { id } = useParams();
   const history = useHistory();
@@ -53,22 +55,17 @@ const Offer = ({ token }) => {
             </Carousel>
           </div>
 
-          <div>
+          <div className="titleOfOneOffer">
             <h1>{data.title}</h1>
           </div>
           <div className="locationAndMiles">
-            <div>
-              <h3>Département : {data.location}</h3>
-            </div>
-            <div>
-              <h3> - </h3>
-            </div>
-            <div>
-              <h3>{data.miles} km</h3>
-            </div>
+            <h3>
+              Département {data.location} - {data.miles} km
+            </h3>
           </div>
-          <div>
-            <h1>{data.price} € / jour</h1>
+          <div className="priceByDay">
+            <h1>Prix / Jour:</h1>
+            <h1>{data.price} € </h1>
           </div>
         </div>
         <div className="secondPartOneOfferOneOfferPage">
@@ -85,12 +82,15 @@ const Offer = ({ token }) => {
             <h2>{data.year}</h2>
           </div>
           <div className="newCriteriasOneOffer">
-            <h2>Km : </h2>
-            <h2>{data.miles}</h2>
+            <h2>Kilométrage : </h2>
+            <h2>{data.miles} km</h2>
           </div>
           <div className="newCriteriasOneOffer">
             <h2>Type : </h2>
-            <h2>{data.type}</h2>
+            {data.type === "custom" && <h2>Custom / Vintage</h2>}
+            {data.type === "roadster" && <h2>Roaster</h2>}
+            {data.type === "sportive" && <h2>Sportive</h2>}
+            {data.type === "trail" && <h2>Trail / Voyageuse</h2>}
           </div>
         </div>
         <div className="descriptionPartOneOffer">
@@ -99,34 +99,42 @@ const Offer = ({ token }) => {
         </div>
         {token === data.owner.token ? (
           <div className="contactPartOneOffer">
-            <h2
-              onClick={() =>
-                history.push({
-                  pathname: "/update",
-                  state: {
-                    data: data,
-                  },
-                })
-              }
-            >
-              Gérez ou Modifiez votre Annonce
-            </h2>
-            <h2
-              onClick={() =>
-                history.push({
-                  pathname: "/delete",
-                  state: {
-                    data: data,
-                  },
-                })
-              }
-            >
-              SUPPRIMEZ VOTRE ANNONCE
-            </h2>
+            <div>
+              <motion.h2
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() =>
+                  history.push({
+                    pathname: "/update",
+                    state: {
+                      data: data,
+                    },
+                  })
+                }
+              >
+                Gérez ou Modifiez votre Annonce
+              </motion.h2>
+            </div>
+            <div className="suppressOfferDivision">
+              <h4
+                onClick={() => {
+                  history.push({
+                    pathname: "/delete",
+                    state: {
+                      data: data,
+                    },
+                  });
+                }}
+              >
+                Supprimez votre annonce
+              </h4>
+            </div>
           </div>
         ) : (
           <div className="contactPartOneOffer">
-            <h2
+            <motion.h2
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
               onClick={() =>
                 history.push({
                   pathname: "/contact",
@@ -137,7 +145,7 @@ const Offer = ({ token }) => {
               }
             >
               Contactez {data.owner.username} pour louer ce véhicule
-            </h2>
+            </motion.h2>
           </div>
         )}
       </div>

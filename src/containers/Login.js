@@ -4,11 +4,13 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useHistory } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
 
 const Login = ({ setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const history = useHistory();
 
@@ -16,6 +18,7 @@ const Login = ({ setUser }) => {
     event.preventDefault();
     if (password && email) {
       try {
+        setIsLoading(true);
         const response = await axios.post(
           "https://ride-it-back.herokuapp.com/user/login",
           {
@@ -26,7 +29,7 @@ const Login = ({ setUser }) => {
         console.log(response.data);
         if (response.data.token) {
           setUser(response.data.token);
-
+          setIsLoading(false);
           history.push("/");
         } else {
           setErrorMessage("An error occured please try again");
@@ -42,7 +45,11 @@ const Login = ({ setUser }) => {
     }
   };
 
-  return (
+  return isLoading ? (
+    <div className="loadingPage">
+      <Loader type="BallTriangle" color="#E60013" height={150} width={150} />
+    </div>
+  ) : (
     <div className="loginPage">
       <div className="formLoginArea">
         <div className="loginTitle">
@@ -76,7 +83,13 @@ const Login = ({ setUser }) => {
           </div>
 
           <div className="submitLoginButton">
-            <button type="submit">Se connecter</button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              type="submit"
+            >
+              Se connecter
+            </motion.button>
           </div>
         </form>
         <div className="ifnotLogin">

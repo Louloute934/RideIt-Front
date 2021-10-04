@@ -20,18 +20,26 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-
+  position: fixed;
+  z-index: 10;
   align-items: center;
   background-color: black;
+  margin-bottom: 10%;
+  top: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid red;
 }
 .logoDiv {
   margin-left: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 .logoDiv :hover {
   cursor: pointer;
 }
 .headerLogo {
-  max-height: 120px;
+  max-height: 110px;
 }
 .headerButtons {
   display: flex;
@@ -59,6 +67,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 5rem;
 }
 
 .homeFirstPart {
@@ -188,6 +197,7 @@ body {
 /* Seconde partie de la page d'accueil  */
 .homeSecondpart {
   width: 100%;
+
   position: relative;
   background-color: white;
   color: black;
@@ -196,9 +206,11 @@ body {
 }
 .homeSecondpart svg {
   display: block;
+  width: 100%;
 }
 .promotionPart {
   display: flex;
+
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -217,19 +229,18 @@ body {
 }
 /* Third Part Take the Road */
 .thirdPartHome {
-  height: 50vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .lastPartHome {
-  height: 18rem;
+  height: 22rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5%;
+
   background-image: url("./Images/bandeau.jpeg");
   background-size: cover;
 }
@@ -284,6 +295,7 @@ body {
 
 /* PAGE OFFERS ====================================================> */
 .OfferPage {
+  padding-top: 10%;
   background-color: black;
   color: white;
   width: 100%;
@@ -423,6 +435,9 @@ body {
   align-items: center;
   margin-bottom: 8%;
 }
+.signupTitle h1 {
+  font-size: 3em;
+}
 .logdiv {
   display: flex;
   justify-content: space-between;
@@ -430,12 +445,13 @@ body {
   margin-bottom: 5%;
 }
 .logdiv h2 {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 .logdiv input {
-  width: 50%;
+  width: 40%;
   height: 35%;
   font-family: inherit;
+  font-size: 1.3em;
 }
 .submitSignup {
   display: flex;
@@ -456,6 +472,7 @@ body {
   cursor: pointer;
   outline: none;
   padding: 1%;
+  font-size: 1.7em;
 }
 .ifnot {
   display: flex;
@@ -483,8 +500,12 @@ body {
   color: White;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 
   justify-content: center;
   align-items: center;
@@ -498,29 +519,35 @@ body {
   font-size: 2em;
 }
 .publishForm {
-  width: 60%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid red;
+  border-radius: 10px;
 }
 .publishAnnonce {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 80%;
   text-align: center;
   padding: 5%;
 }
 .publishAnnonce h1 {
   font-size: 50px;
 }
-s .formFirstPart {
+.publishAnnonce p {
+  font-size: 1.3em;
+}
+.formFirstPart {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  border: 1px solid red;
+
   border-radius: 10px;
 
   padding-bottom: 10%;
@@ -539,31 +566,33 @@ s .formFirstPart {
 .yourRideSpecs {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 .yourRideSpecs h3 {
   font-size: 2em;
-  margin-right: 10rem;
 }
 
 .SpecOfBike {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   border: 1px solid red;
   border-radius: 10px;
   margin-bottom: 5%;
+  padding: 1%;
 }
 .SpecOfBike input {
-  width: 35%;
+  width: 20rem;
   height: 40%;
   font-family: inherit;
   font-size: 1.3em;
 }
 .SpecOfBike select {
-  width: 35%;
+  width: 20rem;
   height: 40%;
   font-family: inherit;
   font-size: 1.3em;
@@ -573,26 +602,25 @@ s .formFirstPart {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  width: 100%;
   border-radius: 10px;
 
   padding-bottom: 10%;
-  margin-top: 5%;
+
   border-radius: 10px;
 }
 
 .titleAnnonce {
-  width: 60vw;
   border: 1px solid red;
-
+  width: 100%;
   border-radius: 10px;
   display: flex;
-
+  padding: 1%;
   justify-content: space-around;
   align-items: center;
 }
 .titleAnnonce input {
-  width: 50%;
+  width: 20rem;
   height: 50%;
   font-size: 1.3em;
 }
@@ -604,13 +632,13 @@ s .formFirstPart {
   justify-content: space-around;
   align-items: center;
   margin-top: 5%;
-
+  padding: 1%;
   border-radius: 10px;
   border: 1px solid red;
 }
 .descriptionAnnonce textarea {
-  width: 50%;
-  height: 70%;
+  width: 20rem;
+  height: 8rem;
   display: flex;
   font-size: 1.3em;
   justify-content: flex-start;
@@ -622,15 +650,15 @@ s .formFirstPart {
   height: 5rem;
   border: 1px solid red;
   border-radius: 10px;
-
+  padding: 1%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 5%;
 }
 .locationAnnonce select {
-  width: 50%;
-  height: 40%;
+  width: 20rem;
+  height: 50%;
   font-size: 1.3em;
 }
 
@@ -639,14 +667,14 @@ s .formFirstPart {
   height: 5rem;
   border: 1px solid red;
   border-radius: 10px;
-
+  padding: 1%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 5%;
 }
 .priceAnnonce input {
-  width: 50%;
+  width: 20rem;
   height: 40%;
   font-size: 1.3em;
 }
@@ -657,10 +685,10 @@ s .formFirstPart {
   border: 1px solid red;
   border-radius: 10px;
   display: flex;
-
   justify-content: space-around;
   align-items: center;
   margin-top: 5%;
+  padding: 1%;
 }
 
 .pictureAnnonce input {
@@ -677,6 +705,7 @@ s .formFirstPart {
   justify-content: center;
   border: 1px solid red;
   border-radius: 10px;
+  padding: 1%;
   width: 100%;
 
   padding-bottom: 10%;
@@ -689,6 +718,7 @@ s .formFirstPart {
 }
 .submitOrError {
   width: 100%;
+  padding: 1%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -698,6 +728,8 @@ s .formFirstPart {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 3rem;
+  padding: 1%;
 }
 .errorMessagePublish {
   color: red;
@@ -710,7 +742,7 @@ s .formFirstPart {
   background-color: white;
   color: black;
   border-radius: 10px;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 .submitOrError :hover {
   cursor: pointer;
@@ -726,6 +758,7 @@ s .formFirstPart {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 10%;
 }
 .entireOffer {
   width: 50%;
@@ -759,8 +792,19 @@ s .formFirstPart {
 .locationAndMiles {
   display: flex;
   flex-direction: row;
-  width: 30%;
-  justify-content: space-evenly;
+  font-size: 1.1em;
+  color: white;
+}
+.titleOfOneOffer {
+  color: white;
+}
+.priceByDay {
+  display: flex;
+  flex-direction: row;
+}
+.priceByDay :first-child {
+  margin-right: 2rem;
+  color: white;
 }
 .secondPartOneOfferOneOfferPage {
   width: 100%;
@@ -777,7 +821,11 @@ s .formFirstPart {
 .newCriteriasOneOffer {
   width: 40%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+.newCriteriasOneOffer :first-child {
+  margin-right: 2rem;
+  color: white;
 }
 .descriptionPartOneOffer {
   width: 100%;
@@ -788,8 +836,15 @@ s .formFirstPart {
   padding-top: 2%;
   padding-bottom: 2%;
 }
+.descriptionPartOneOffer h2 {
+  font-size: 1.3em;
+}
+.descriptionPartOneOffer h1 {
+  color: white;
+}
 .contactPartOneOffer {
   width: 100%;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -798,8 +853,10 @@ s .formFirstPart {
   padding-bottom: 2%;
   border-bottom: 1px solid red;
 }
+
 .contactPartOneOffer h2 {
   border: 1px solid red;
+  text-align: center;
   height: 3rem;
   display: flex;
   align-items: center;
@@ -809,8 +866,8 @@ s .formFirstPart {
   margin-bottom: 2%;
 }
 .contactPartOneOffer :hover {
-  color: black;
-  background-color: white;
+  color: red;
+
   cursor: pointer;
 }
 /* LOGIN PAGE ================================================> */
@@ -849,20 +906,24 @@ s .formFirstPart {
   margin-bottom: 5%;
   margin-top: 8%;
 }
+.loginTitle h1 {
+  font-size: 3em;
+}
 .logindiv {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 
   padding: 5%;
 }
 .logindiv h2 {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 .logindiv input {
   width: 50%;
   height: 40%;
   font-family: inherit;
+  font-size: 1.3em;
 }
 .submitLoginButton {
   display: flex;
@@ -878,6 +939,7 @@ s .formFirstPart {
   cursor: pointer;
   outline: none;
   padding: 1%;
+  font-size: 1.7em;
 }
 .submitLoginButton :hover {
   cursor: pointer;
@@ -1049,6 +1111,7 @@ s .formFirstPart {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 10%;
 }
 .deleteParts {
   width: 60%;
@@ -1145,6 +1208,7 @@ s .formFirstPart {
   background-color: rgb(34, 34, 34);
   background-blend-mode: overlay;
   background-size: cover;
+  padding-top: 10%;
 }
 
 .offersList {
@@ -1155,7 +1219,7 @@ s .formFirstPart {
   align-items: center;
 }
 .oneOfferFromList {
-  width: 80%;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1170,16 +1234,18 @@ s .formFirstPart {
 }
 .buttonToGetToOffer {
   display: flex;
-  width: 20%;
+
   align-items: center;
   justify-content: center;
 }
 .buttonToGetToOffer h3 {
   border: 1px solid red;
+  width: 18rem;
   height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 1%;
   border-radius: 10px;
   margin-bottom: 2%;
@@ -1196,6 +1262,67 @@ s .formFirstPart {
   }
 }
 @media (max-width: 1024px) {
+  .pictureAnnonce h3 {
+    font-size: 1.7em;
+  }
+  .pictureAnnonce input {
+    font-size: 1em;
+  }
+  .pictureAnnonce {
+    padding: 1%;
+  }
+  .priceAnnonce h3 {
+    font-size: 1.7em;
+  }
+  .priceAnnonce {
+    padding: 1%;
+  }
+  .locationAnnonce {
+    padding: 1%;
+  }
+  .locationAnnonce h3 {
+    font-size: 1.7em;
+  }
+  .titleAnnonce {
+    padding: 1%;
+  }
+  .titleAnnonce h3 {
+    font-size: 1.7em;
+  }
+  .descriptionAnnonce h3 {
+    font-size: 1.7em;
+  }
+  .descriptionAnnonce {
+    padding: 1%;
+  }
+  .publishAnnonce h1 {
+    font-size: 2.8rem;
+  }
+  .publishAnnonce p {
+    font-size: 1.2em;
+  }
+  .publishAnnonce {
+    width: 100%;
+  }
+  .publishForm {
+    width: 80vw;
+    border: none;
+  }
+  .firstPartTitle h1 {
+    font-size: 3em;
+  }
+  .SpecOfBike h3 {
+    font-size: 1.7em;
+  }
+  .SpecOfBike input {
+    width: 60%;
+  }
+  .SpecOfBike select {
+    width: 60%;
+  }
+  .SpecOfBike {
+    padding: 1%;
+  }
   .argumentsPromo p {
     font-size: 1.2em;
   }
@@ -1285,6 +1412,60 @@ s .formFirstPart {
   }
 }
 @media (max-width: 600px) {
+  .submitOrError button {
+    font-size: 1em;
+  }
+  .pictureAnnonce h3 {
+    font-size: 1.3em;
+  }
+  .pictureAnnonce input {
+    font-size: 0.8em;
+  }
+  .priceAnnonce h3 {
+    font-size: 1.3em;
+  }
+  .priceAnnonce input {
+    font-size: 1em;
+  }
+  .locationAnnonce h3 {
+    font-size: 1.3em;
+  }
+  .locationAnnonce select {
+    font-size: 1em;
+    width: 50%;
+  }
+  .descriptionAnnonce h3 {
+    font-size: 1.3em;
+  }
+  .descriptionAnnonce textarea {
+    font-size: 1em;
+  }
+  .titleAnnonce h3 {
+    font-size: 1.3em;
+  }
+  .titleAnnonce input {
+    font-size: 1em;
+  }
+  .publishAnnonce h1 {
+    font-size: 2em;
+  }
+  .publishAnnonce p {
+    font-size: 1em;
+  }
+  .firstPartTitle h1 {
+    font-size: 2.2em;
+  }
+  .SpecOfBike h3 {
+    font-size: 1.3em;
+  }
+  .SpecOfBike input {
+    width: 70%;
+    font-size: 1em;
+  }
+  .SpecOfBike select {
+    width: 70%;
+    font-size: 1em;
+  }
   .bikecat {
     width: 40%;
     margin-bottom: 20%;
@@ -1337,7 +1518,145 @@ s .formFirstPart {
     font-size: 1.8em;
   }
 }
+@media (max-width: 500px) {
+  .header {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1%;
+    top: 0;
+    left: 0;
+  }
+  .publishPage {
+    background-image: url("./Images/Roadster.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+  }
+  .errorMessagePublish {
+    font-size: 1em;
+  }
+  .firstPartTitle {
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .submitYourAnnonce {
+    width: 90vw;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .errorSection {
+    margin-top: 0;
+    padding: 0;
+  }
+  .submitOrError {
+    width: 90vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .publishAnnonce {
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .publishAnnonce p {
+    font-size: 0.6em;
+  }
+  .formFirstPart {
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .yourRideSpecs {
+    width: 100%;
+  }
+  .SpecOfBike {
+    width: 100%;
+  }
+  .SpecOfBike h3 {
+    font-size: 0.8em;
+  }
+  .SpecOfBike input {
+    width: 50%;
+    font-size: 0.6em;
+  }
+  .SpecOfBike select {
+    width: 50%;
+    font-size: 0.6em;
+  }
+  .formSecondPart {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .titleAnnonce h3 {
+    font-size: 0.8em;
+  }
+  .titleAnnonce input {
+    font-size: 0.6em;
+    width: 50%;
+  }
+  .descriptionAnnonce textarea {
+    font-size: 0.6em;
+    width: 50%;
+    height: 4rem;
+  }
+  .locationAnnonce select {
+    font-size: 0.6em;
+    width: 50%;
+  }
+  .priceAnnonce input {
+    width: 40%;
+    font-size: 0.6em;
+  }
+  .descriptionAnnonce {
+    width: 100%;
+    height: 5rem;
+  }
+  .descriptionAnnonce h3 {
+    font-size: 0.8em;
+  }
+  .locationAnnonce h3 {
+    font-size: 0.8em;
+  }
+  .pictureAnnonce h3 {
+    font-size: 0.8em;
+  }
+  .priceAnnonce h3 {
+    font-size: 0.8em;
+  }
+  .locationAnnonce {
+    width: 100%;
+  }
+  .priceAnnonce {
+    width: 100%;
+  }
+  .pictureAnnonce {
+    width: 100%;
+  }
+  .titleAnnonce {
+    width: 100%;
+  }
+}
 @media (max-width: 400px) {
+  .locationAnnonce {
+    padding: 0;
+    width: 100%;
+  }
+  .locationAnnonce select {
+    width: 50%;
+    height: 2rem;
+    display: flex;
+  }
   .bikecat h1 {
     font-size: 0.85em;
   }
@@ -1350,8 +1669,7 @@ s .formFirstPart {
   }
   .headerButtons {
     font-size: 0.7em;
-    border: 1px solid red;
-    border-radius: 10px;
+
     margin-bottom: 10px;
   }
   .searchBar {
